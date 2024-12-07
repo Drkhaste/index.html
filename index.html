@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طراحی مدرن و تاریک</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #9f70fd;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(45deg, #1a1a1a, #0a0a0a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #9f70fd;
+            filter: blur(100px);
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #70fdfd;
+            filter: blur(100px);
+            animation: float 8s infinite ease-in-out reverse;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(100px, 100px);
+            }
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #9f70fd, #70fdfd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #9f70fd, #70fdfd);
+            border: none;
+            border-radius: 50px;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #9f70fd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">لوگو</div>
+        <ul>
+            <li><a href="#home">خانه</a></li>
+            <li><a href="#features">ویژگی‌ها</a></li>
+            <li><a href="#about">درباره ما</a></li>
+            <li><a href="#contact">تماس</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>طراحی مدرن و خلاقانه</h1>
+            <p>با استفاده از جدیدترین تکنولوژی‌ها و طراحی مدرن، تجربه‌ای منحصر به فرد را برای شما فراهم می‌کنیم.</p>
+            <a href="#" class="cta-button">شروع کنید</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>سرعت بالا</h3>
+                <p>عملکرد سریع و بهینه‌سازی شده برای بهترین تجربه کاربری</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>طراحی مدرن</h3>
+                <p>رابط کاربری زیبا و جذاب با جدیدترین ترندهای طراحی</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>ریسپانسیو</h3>
+                <p>سازگار با تمامی دستگاه‌ها و صفحه نمایش‌ها</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
